@@ -4,7 +4,7 @@ import { kv } from '@vercel/kv';
 import { NextRequest, NextResponse } from 'next/server';
 
 export const POST = async (req: NextRequest) => {
-  const { url } = await req.json();
+  const { url } = (await req.json()) as any;
 
   if (!url) {
     return NextResponse.json({ status: 400, body: 'Invalid request' });
