@@ -1,4 +1,4 @@
-# Nextjs 13 App Dir
+# Next Short URL with `@vercel/kv`
 
 ## Getting Started
 
@@ -12,22 +12,13 @@ npm install or yarn
 npm run dev or yarn dev
 ```
 
-## Library Docs
+## Test
 
-```md
-1. Framework Nextjs: https://nextjs.org/
+```http
+POST http://localhost:3000/api/short-url
+content-type: application/json
 
-2. State management Reactjs: https://jotai.org/
-
-3. Library UI: https://ant.design
-
-4. Library for request api: https://www.npmjs.com/package/umi-request
-
-5. Library Multiple Language: https://www.npmjs.com/package/next-i18next
-
-6. Library Hooks popular: https://ahooks.js.org/
-
-7. Library dayjs: https://day.js.org/
-
-8. Processing CSS: https://sass-lang.com/guide
+{
+    "url": "https://hung.thedev.id"
+}
 ```
