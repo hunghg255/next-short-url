@@ -9,6 +9,14 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        destination: '/api/short-url/:path*',
+      },
+    ];
+  },
 };
 
 module.exports = withBundleAnalyzer(nextConfig);
